@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div *ngIf="users">
+    <div *ngFor="let user of users">
+        {{user.email}}
+    </div>
+</div>
+<app-footer></app-footer>

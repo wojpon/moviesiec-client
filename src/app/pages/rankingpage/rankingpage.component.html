@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div *ngIf="movies">
+    <div *ngFor="let movie of movies">
+        {{movie.title}}
+        {{movie.year}}
+        {{movie.description}}
+        {{movie.rating}}
+    </div>
+</div>
+<app-footer></app-footer>
