@@ -12,6 +12,8 @@ import { UserpageComponent } from './pages/userpage/userpage.component';
 import { AdminpageComponent } from './pages/adminpage/adminpage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { HeaderComponent } from './components/header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -46,4 +46,8 @@ export class HttpService {
   deleteUser(id: string) {
     return this.http.delete(this.apiUrl + '/users/' + id);
   }
+
+  verifyCredentials(user: User) {
+    return this.http.post<User>(this.apiUrl + '/login', user);
+  }
 }

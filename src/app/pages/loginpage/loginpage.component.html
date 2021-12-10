@@ -1,2 +1,11 @@
 <app-header></app-header>
-<app-footer></app-footer> 
+<form #loginForm="ngForm" (submit)="verifyCredentials(loginForm)">
+    <mat-form-field>
+        <input matInput ngModel placeholder="email" type="text" name="email">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput ngModel placeholder="password" type="password" name="password">
+    </mat-form-field>
+    <button mat-button type="submit">Login</button>
+</form>
+<app-footer></app-footer>
