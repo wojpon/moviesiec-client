@@ -1,0 +1,27 @@
+mat-toolbar {
+  /* background: #205a8c; */
+  background: #1d5273;
+}
+.logo-text {
+  margin-right: 10px;
+}
+.login-icon {
+  height: 28px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(309deg)
+    brightness(102%) contrast(102%);
+}
+.logo-icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(309deg)
+    brightness(102%) contrast(102%);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  color: white;
+}

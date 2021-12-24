@@ -1,59 +1,75 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Wojtek Ponikiewski",
-            "email": "wojtek.ponikiewski@gmail.com",
-            "password": "nimda",
-            "isAdmin": false
-        },
-        {
-            "id": 2,
-            "name": "Piotr Sikora",
-            "email": "piotr.sikora@gmail.com",
-            "password": "nimda",
-            "isAdmin": false
-        },
-        {
-            "id": 3,
-            "name": "Admin",
-            "email": "admin",
-            "password": "nimda",
-            "isAdmin": true
-        }
-    ],
-    "movies": [
-        {
-            "id": 1,
-            "title": "Pulp Fiction",
-            "year": "1994",
-            "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-            "image": "xxx",
-            "rating": 5
-        },
-        {
-            "id": 2,
-            "title": "The Shawshank Redemption",
-            "year": "1994",
-            "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-            "image": "xxx",
-            "rating": 4
-        },
-        {
-            "id": 3,
-            "title": "The Godfather",
-            "year": "1972",
-            "description": "The Godfather follows Vito Corleone, Don of the Corleone family, as he passes the mantel to his unwilling son, Michael.",
-            "image": "xxx",
-            "rating": 5
-        },
-        {
-            "id": 4,
-            "title": "Goodfellas",
-            "year": "1990",
-            "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
-            "image": "xxx",
-            "rating": 4
-        }
-    ]
+  "users": [
+    {
+      "name": "Wojtek Ponikiewski",
+      "email": "wojtek.ponikiewski@gmail.com",
+      "nickname": "wojpon",
+      "password": "nimda",
+      "profilePictureURL": "https://s3.amazonaws.com/hobartpulp/photos/1275/full_cropped_130702090729-lost-in-translation-suntory-620xa.jpg",
+      "isAdmin": false
+    },
+    {
+      "name": "Piotr Sikora",
+      "email": "piotr.sikora@gmail.com",
+      "nickname": "piotsik",
+      "password": "nimda",
+      "profilePictureURL":"https://udajesie.files.wordpress.com/2019/12/slepnac.jpg?w=1000",
+      "isAdmin": false
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "nickname": "admin",
+      "password": "nimda",
+      "profilePictureURL":"https://s.lubimyczytac.pl/upload/authors/153313/612020-352x500.jpg",
+      "isAdmin": true
+    }
+  ],
+  "movies": [
+    {
+      "title": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "screenWriter": "",
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "releaseYear": 1994,
+      "rating": 5,
+      "ratingCount": 0,
+      "ranking": 0,
+      "genre": "",
+      "productionCountry": "",
+      "boxOffice": 0,
+      "length": 0,
+      "posterUrl": "https://ocdn.eu/pulscms-transforms/1/98Jk9kpTURBXy8zOWIwYWMxZDI2NzMzZGNhOWNiOTk1YWUyY2QwMDVhOS5qcGeTlQMACs0EsM0Co5MFzQMUzQG8kwmmNGIxZTZhBoGhMAE/uma-thurman-jako-mia-wallace-w-filmie-pulp-fiction.jpg"
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "screenWriter": "",
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "releaseYear": 1994,
+      "rating": 4,
+      "ratingCount": 0,
+      "ranking": 0,
+      "genre": "",
+      "productionCountry": "",
+      "boxOffice": 0,
+      "length": 0,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNTYxOTYyMzE3NV5BMl5BanBnXkFtZTcwOTMxNDY3Mw@@._V1_.jpg"
+    },
+    {
+      "title": "The Godfather",
+      "director": "Francis Ford Coppola",
+      "screenWriter": "",
+      "description": "The Godfather follows Vito Corleone, Don of the Corleone family, as he passes the mantel to his unwilling son, Michael.",
+      "releaseYear": 1972,
+      "rating": 5,
+      "ratingCount": 0,
+      "ranking": 0,
+      "genre": "",
+      "productionCountry": "",
+      "boxOffice": 0,
+      "length": 0,
+      "posterUrl": "https://i.guim.co.uk/img/media/344406ae576b47ce2d97d310babe8262b8bff127/0_255_3504_2103/master/3504.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=d7c4a37ef4a011889893931afe9d4e29"
+    }
+  ]
 }

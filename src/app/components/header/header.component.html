@@ -1,7 +1,32 @@
-<div>
-    <button routerLink='/home'>Home</button>
-    <button routerLink='/ranking'>Ranking</button>
-    <button routerLink='/login'>Login</button>
-    <button routerLink='/user'>User</button>
-    <button routerLink='/admin'>Admin</button>
-</div>
+<mat-toolbar>
+    <span class="logo-text">
+        <a routerLink="/home">
+            Moviesieć
+        </a>
+    </span>
+    <button routerLink="/home" mat-icon-button>
+        <img class="logo-icon" src="/assets/icons/logo.svg" alt="Moviesiec">
+    </button>
+    <span class="example-spacer"></span>
+    <button routerLink='/ranking' mat-button>
+        Ranking
+    </button>
+    <span *ngIf="(authService.currentUser)">
+        <button routerLink='/user' mat-button>
+            User
+        </button>
+        <span *ngIf="(authService.currentUser.isAdmin == true)">
+            <button routerLink='/admin' mat-button>
+                Admin
+            </button>
+        </span>
+        <button routerLink='/logout' mat-button>
+            Logout
+        </button>
+    </span>
+    <span *ngIf="(!authService.currentUser)">
+        <button routerLink='/login' mat-icon-button>
+            <img class="login-icon" src="/assets/icons/user-man-svgrepo-com.svg" alt="Login">
+        </button>
+    </span>
+</mat-toolbar>

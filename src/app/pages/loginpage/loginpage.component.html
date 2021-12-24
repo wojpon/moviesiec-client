@@ -1,11 +1,22 @@
-<app-header></app-header>
-<form #loginForm="ngForm" (submit)="verifyCredentials(loginForm)">
-    <mat-form-field>
-        <input matInput ngModel placeholder="email" type="text" name="email">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput ngModel placeholder="password" type="password" name="password">
-    </mat-form-field>
-    <button mat-button type="submit">Login</button>
-</form>
-<app-footer></app-footer>
+<div class="main-container">
+        <mat-card>
+            <mat-card-title>Login</mat-card-title>
+            <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)">
+                <mat-form-field>
+                    <mat-label>Login</mat-label>
+                    <input matInput (ngModel)="login" type="text" name="login" id="login" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput (ngModel)=" password" type="password" name="password" id="password" required>
+                </mat-form-field>
+                <mat-error *ngIf="(authService.errorMessage)">
+                    {{authService.errorMessage}}
+                </mat-error>
+                <div class="buttons">
+                    <button mat-button type="submit" [disabled]="loginForm.invalid">Login</button>
+                    <button mat-button type="button">Back</button>
+                </div>
+            </form>
+        </mat-card>
+</div>

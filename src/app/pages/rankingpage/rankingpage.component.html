@@ -1,10 +1,27 @@
-<app-header></app-header>
-<div *ngIf="movies">
+<div class="main-container" *ngIf="movies">
     <div *ngFor="let movie of movies">
-        {{movie.title}}
-        {{movie.year}}
-        {{movie.description}}
-        {{movie.rating}}
+        <mat-card class="movie-card">
+            <mat-card-header>
+                <img matCardAvatar src={{movie.posterUrl}}>
+                <mat-card-title>{{movie.title}}</mat-card-title>
+                <mat-card-subtitle>{{movie.releaseYear}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="description">
+                    {{movie.description}}
+                </div>
+                <p class="rating">
+                    {{movie.rating}}
+                </p>
+                <mat-radio-group>
+                    <mat-radio-button (click)="changeRating(1)" value="1"></mat-radio-button>
+                    <mat-radio-button (click)="changeRating(2)" value="2"></mat-radio-button>
+                    <mat-radio-button (click)="changeRating(3)" value="3"></mat-radio-button>
+                    <mat-radio-button (click)="changeRating(4)" value="4"></mat-radio-button>
+                    <mat-radio-button (click)="changeRating(5)" value="5"></mat-radio-button>
+                    <button mat-raised-button color="primary" (click)="rateMovie()">Rate</button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
-<app-footer></app-footer>

@@ -1,7 +1,21 @@
-<app-header></app-header>
-<div *ngIf="users">
+<div class="main-container">
     <div *ngFor="let user of users">
-        {{user.email}}
+        <mat-card>
+            <mat-card-header>
+                <img matCardAvatar src={{user.profilePictureURL}}>
+                <mat-card-title>{{user.name}}</mat-card-title>
+                <mat-card-subtitle>{{user.nickname}}</mat-card-subtitle>
+                <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p *ngIf="user.isAdmin==true">
+                    ADMIN
+                </p>
+                <p *ngIf="user.isAdmin==false">
+                    USER
+                </p>
+                <button *ngIf="user.isAdmin==false" mat-raised-button>Delete</button>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
-<app-footer></app-footer>

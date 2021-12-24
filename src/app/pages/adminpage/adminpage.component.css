@@ -1,0 +1,23 @@
+.main-container {
+  height: 100%;
+}
+mat-card {
+  display: flex;
+  justify-content: space-between;
+}
+mat-card-header {
+  display: flex;
+  align-items: center;
+}
+mat-card-subtitle {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+mat-card-content {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

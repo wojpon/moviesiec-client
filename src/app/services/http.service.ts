@@ -1,7 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { LoginRequest } from '../models/login-request';
+import { LoginResponse } from '../models/login-response';
 import { Movie } from '../models/movie';
 import { User } from '../models/user';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +13,7 @@ import { User } from '../models/user';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  apiUrl = 'http://localhost:3000';
+  apiUrl = 'http://localhost:8080/api';
 
   getMovies() {
     return this.http.get<Movie[]>(this.apiUrl + '/movies');
@@ -47,7 +51,10 @@ export class HttpService {
     return this.http.delete(this.apiUrl + '/users/' + id);
   }
 
-  verifyCredentials(user: User) {
-    return this.http.post<User>(this.apiUrl + '/login', user);
+  authenticate(loginRequest: LoginRequest): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(
+      this.apiUrl + '/users/login',
+      loginRequest
+    );
   }
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
-import { HttpService } from 'src/app/services/http.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -9,22 +10,14 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./loginpage.component.css'],
 })
 export class LoginpageComponent implements OnInit {
-  constructor(private httpService: HttpService) {}
+  login: string;
+  password: string;
+
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {}
 
-  user: User = {
-    id: '',
-    name: '',
-    email: '',
-    password: '',
-    isAdmin: false,
-  };
-
-  verifyCredentials(loginForm: NgForm) {
-    this.user.email = loginForm.value.email;
-    this.user.password = loginForm.value.password;
-
-    this.httpService.verifyCredentials(this.user);
+  loginUser(loginForm: NgForm) {
+    this.authService.login(loginForm.value.login, loginForm.value.password);
   }
 }

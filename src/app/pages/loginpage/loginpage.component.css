@@ -1,0 +1,22 @@
+.main-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mat-form-field {
+  width: 100%;
+  min-width: 100px;
+}
+
+mat-card-title {
+  display: flex;
+  justify-content: center;
+}
+mat-error {
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
